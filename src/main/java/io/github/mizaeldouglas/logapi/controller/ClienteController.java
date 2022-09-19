@@ -1,6 +1,6 @@
 package io.github.mizaeldouglas.logapi.controller;
 
-import io.github.mizaeldouglas.logapi.domain.ClientRepository;
+import io.github.mizaeldouglas.logapi.domain.repository.ClientRepository;
 import io.github.mizaeldouglas.logapi.domain.model.Cliente;
 import io.github.mizaeldouglas.logapi.domain.service.CatalogoClienteService;
 import lombok.AllArgsConstructor;

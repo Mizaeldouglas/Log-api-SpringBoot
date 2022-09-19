@@ -1,4 +1,4 @@
-package io.github.mizaeldouglas.logapi.domain;
+package io.github.mizaeldouglas.logapi.domain.repository;
 
 import io.github.mizaeldouglas.logapi.domain.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;

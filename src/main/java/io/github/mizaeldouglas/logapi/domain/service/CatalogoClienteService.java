@@ -1,6 +1,6 @@
 package io.github.mizaeldouglas.logapi.domain.service;
 
-import io.github.mizaeldouglas.logapi.domain.ClientRepository;
+import io.github.mizaeldouglas.logapi.domain.repository.ClientRepository;
 import io.github.mizaeldouglas.logapi.domain.exception.NegocioExecption;
 import io.github.mizaeldouglas.logapi.domain.model.Cliente;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CatalogoClienteService {
 
-	ClientRepository clientRepository;
+	private ClientRepository clientRepository;
+
+	public  Cliente buscar(Long clineteId){
+		return clientRepository.findById(clineteId)
+				.orElseThrow(() -> new NegocioExecption("cliente não encontrado"));
+	}
 
 	@Transactional
 	public Cliente salvar(Cliente cliente){
